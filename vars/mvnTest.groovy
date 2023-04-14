@@ -1,3 +1,3 @@
-def call() {
-    sh 'mvn test'
+def call(dest) {
+    sh 'mvn -Dtest=$dest test'
 }
