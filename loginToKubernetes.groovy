@@ -1,6 +1,6 @@
-def call(String login_credentials) {
+def call(String loginCredentials) {
     sh """
-        ssh -o StrictHostKeyChecking=no ${login_credentials}
+        ssh -o StrictHostKeyChecking=no ${loginCredentials}
 
 
     """
