@@ -1,7 +1,7 @@
-def call(String project, String imageTag, String dokerUser) {
+def call(String imageName, String imageTag, String dokerUser) {
     sh '''
-        docker image build -t $(dokerUser)/$(project) .
-        docker image tag $(dokerUser)/$(project) $(dokerUser)/$(project):$(imageTag)
-        docker image tag $(dokerUser)/$(project) $(dokerUser)/$(project):latest
+        docker image build -t ${dokerUser}/${imageName} .
+        docker image tag ${dokerUser}/${imageName} ${dokerUser}/${imageName}:${imageTag}
+        docker image tag ${dokerUser}/${imageName} ${dokerUser}/${imageName}:latest
     '''
 }
